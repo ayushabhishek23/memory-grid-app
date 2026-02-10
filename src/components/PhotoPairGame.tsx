@@ -154,15 +154,23 @@ export default function PhotoPairGame({ handleShowProposal }: Props) {
         </motion.div>
       )}
 
-      {/* 🆘 SKIP */}
-      {showSkip && !unfurled && (
-        <button
-          onClick={handleSkip}
-          className="absolute bottom-8 px-6 py-3 bg-pink-500 text-white rounded-xl shadow-lg hover:bg-pink-600 transition"
-        >
-          Skip Puzzle 💕
-        </button>
-      )}
+{showSkip && !unfurled && (
+  <button
+    onClick={handleSkip}
+    className="
+      fixed z-50
+      top-4 left-4
+      sm:top-6 sm:left-6
+      px-4 py-2
+      bg-pink-500 text-white
+      rounded-xl shadow-lg
+      hover:bg-pink-600 transition
+    "
+  >
+    Skip Puzzle 💕
+  </button>
+)}
+
 
       {/* 📝 HELPER TEXTS */}
       <div className="pointer-events-none absolute inset-0 flex justify-between items-end px-12 pb-12">
